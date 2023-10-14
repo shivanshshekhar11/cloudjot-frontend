@@ -6,14 +6,14 @@ export  default  function KeyScreen() {
     const key = useParams().key;
     return (<div className="col-12">
             <p className="centerText p-3" >
-                Save given qrcode or security key to get your files easily in future
+                Scan given QR code OR Save this passkey to access your file on another device
             </p>
             <center>
                 <QRCode value={SITE_URL+"files/"+key}/>
             </center>
-            <p className="centerText p-4 boldText"> OR </p>
+            <p className="p-4 boldText" style={{textAlign:'center'}}> OR </p>
             <p className="centerText p-2 keyText" >
-                Security Key : {key}
+                Passkey : {key}
             </p>
 
     </div>);

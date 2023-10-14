@@ -51,21 +51,21 @@ export default  function FilesPage() {
     }
 
     if(loading) return  <div className="d-flex flex-column justify-content-center align-items-center p-4">
-            <h2>Loading Please wait....</h2>
+            <p className="loading" >Loading ...</p>
     </div>
     if(!found || files ==null || files.length ===0) return(
         <div className="d-flex flex-column justify-content-center align-items-center">
-        <img src={notFound} style={{width:"70%"}}/>
-        <h3>{error}</h3>
+        <img src={notFound} style={{width:"50%"}} alt='file not found'/>
+        <p className='error'>{error}</p>
     </div>);
 
     return (
         <div className="m-3 p-2 ">
-            <h3>Your Files</h3>
+            <p className="centerText p-3" >Your Files</p>
             <FileListComponent files={files}/>
             <button className="btn btn-warning" onClick={()=>{
                 downloadFiles();
-            }}> Download Files</button>
+            }}>Download</button>
         </div>
     );
 }

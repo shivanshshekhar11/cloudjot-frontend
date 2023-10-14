@@ -102,6 +102,13 @@ detailCard{
   margin-bottom: 0;
 }
 
+.loading{
+  color:green;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
 .keyScreen{
   display: flex;
   align-items: center;
@@ -114,6 +121,7 @@ detailCard{
 
 .centerText{
   text-align: center;
+  margin:1em
 }
 .keyText{
   font-size: 22px;

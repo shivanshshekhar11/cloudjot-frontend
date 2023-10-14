@@ -11,6 +11,7 @@ import SavePage from "./ui/screens/save";
 import DownloadPage from "./ui/screens/download";
 import FilesPage from "./ui/screens/files";
 import KeyScreen from "./ui/screens/key_screen";
+import About from "./ui/screens/About";
 
 
 export default function Main() {
@@ -25,6 +26,7 @@ export default function Main() {
                     <Route path="/download" element={<DownloadPage/>} />
                     <Route path="/files/:key" element={<FilesPage/>} />
                     <Route path="/key/:key" element={<KeyScreen/>} />
+                    <Route path="/About" element={<About/>} />
                 </Routes>
 
             </div>

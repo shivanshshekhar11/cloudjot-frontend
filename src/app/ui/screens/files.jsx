@@ -61,9 +61,13 @@ export default  function FilesPage() {
 
     return (
         <div className="m-3 p-2 ">
-            <p className="centerText p-3" >Your Files</p>
+            <p className="loading" style={{
+                width:'15%', marginLeft:'42%', marginBottom:'30px', marginTop:'20px'
+            }}>Your Files</p>
             <FileListComponent files={files}/>
-            <button className="btn btn-warning" onClick={()=>{
+            <button className="btn btn-warning" style={{
+                width:'15%', marginLeft:'42%', marginBottom:'30px', marginTop:'20px'
+            }} onClick={()=>{
                 downloadFiles();
             }}>Download</button>
         </div>

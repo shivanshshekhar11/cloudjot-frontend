@@ -1,13 +1,15 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default  function Footer() {
     const mystyle = {
         display:"flex",
         justifyContent:"space-between",
-        width:"100%"
+        width:"100%",
+        zIndex:'2'
     };
 
-    const listStyle1 = {
+    const listStyle = {
         listStyle:'none',
         display:'flex',
         flexDirection:'row',
@@ -18,18 +20,6 @@ export default  function Footer() {
         width:'7.5%',
         height:'4vw'
     }
-
-    const listStyle2 = {
-        listStyle:'none',
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'space-evenly',
-        alignItems:'center',
-        margin:'0',
-        padding:'0',
-        width:'20%',
-        height:'4vw'
-    }
     return (
         <nav className="navbar navbar-expand-md  bg-warning" style={{
             position: 'fixed',
@@ -38,21 +28,15 @@ export default  function Footer() {
         }}>
             <div className="container-fluid">
                 <div style={mystyle}>
-                    <ul style={listStyle1}>
+                    <ul style={listStyle}>
                         <li>
-                        <a href="https://github.com/shivanshshekhar11/cloudjot-frontend"><i class="fab fa-github" style={{color:'#000000'}}></i></a>
-                        </li>
-                        <li>
-                        <a href="https://www.linkedin.com/in/shivanshshekhar11/details/projects/"><i class="fab fa-linkedin" style={{color:'#000000'}}></i></a>
+                        <a href="https://github.com/shivanshshekhar11/cloudjot-frontend" target="_blank"><i class="fab fa-github" style={{color:'#000000'}}></i></a>
                         </li>
                     </ul>
-                    <ul style={listStyle2}>
+                    <ul style={listStyle}>
 
                         <li>
-                            <a>About Us</a>
-                        </li>
-                        <li>
-                            <a>Contact Us</a>
+                            <Link className="nav-link" to="/About">About</Link>
                         </li>
                     </ul>
                 </div>

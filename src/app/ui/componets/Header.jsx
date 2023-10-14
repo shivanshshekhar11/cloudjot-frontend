@@ -10,7 +10,8 @@ export default  function Header() {
         <nav className="navbar navbar-expand-md  bg-warning" style={{
             position: 'fixed',
             top: '0',
-            width: '100%'
+            width: '100%',
+            zIndex:'3'
         }}>
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/" style={{fontFamily: "Pacifico", fontSize:"2.5vw"}}>CloudJot</Link>

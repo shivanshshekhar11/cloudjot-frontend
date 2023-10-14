@@ -23,15 +23,15 @@ export default  function DownloadPage() {
     }
     return (
         <div className="d-flex flex-column align-items-center justify-content-center fullScreen">
-                    <h3>Enter Security key to get your files.</h3>
+                    <h3>Enter unique passkey</h3>
 
-                   <input type="text" value={text} onChange={handleChange} placeholder="Enter Security Key..." className="keyTextField"/>
+                   <input type="text" value={text} onChange={handleChange} placeholder="e.g. DT20234728582" className="keyTextField"/>
             <div className="m-2"/>
 
             {(err!=null && err.length > 0) ?<p className="error">{err}</p>:null}
             <div className="m-2"/>
                 <button className="btn btn-warning" onClick={getFiles}>
-                    Get files
+                    Get Files
                 </button>
         </div>
     );

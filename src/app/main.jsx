@@ -5,6 +5,7 @@ import {
     Route,
 } from "react-router-dom";
 import Header from "./ui/componets/Header";
+import Footer from "./ui/componets/Footer";
 import Home from "./ui/screens/Home";
 import SavePage from "./ui/screens/save";
 import DownloadPage from "./ui/screens/download";
@@ -16,6 +17,7 @@ export default function Main() {
     return (
         <Router>
             <Header/>
+            <div style={{height:'5vw'}}></div>
             <div className="container">
                 <Routes>
                     <Route path="/" element={<Home/>} />
@@ -25,8 +27,9 @@ export default function Main() {
                     <Route path="/key/:key" element={<KeyScreen/>} />
                 </Routes>
 
-                </div>
-
+            </div>
+            <div style={{height:'5vw'}}></div>
+            <Footer/>
         </Router>
     );
 }

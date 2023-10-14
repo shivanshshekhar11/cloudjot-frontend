@@ -67,9 +67,11 @@ detailCard{
   flex-flow: column nowrap;
   font-size: 24px;
   color: #555555;
-  border: 2px #333333 solid;
+  border: 2px #333333 dashed;
+  border-right: 0;
   border-radius: 12px 0 0 12px;
   background-color: white;
+  width:20vw;
 }
 .area__icon {
   font-size: 64px;
@@ -97,6 +99,7 @@ detailCard{
   color:red;
   font-weight: bold;
   font-size: 22px;
+  margin-bottom: 0;
 }
 
 .keyScreen{
@@ -124,10 +127,11 @@ detailCard{
   width: max(200px,60%);
   padding: 10px;
   border-radius: 22px;
-  border: 3px solid green;
+  border: 2px solid rgb(0, 0, 0);
+  margin-top: 20px;
 }
 .fullScreen{
-height: 400px;
+height: 20vw;
 }
 .file-card{
   /*border-radius: 12px;*/

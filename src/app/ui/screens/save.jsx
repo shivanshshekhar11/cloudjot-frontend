@@ -77,7 +77,7 @@ export default  function SavePage() {
    }
 
 return<div className="d-flex flex-column align-content-center">
-                    <div className="d-flex flex-row " style={{height:"360px",marginTop:"20px",borderRadius:"12px"}}>
+                    <div className="d-flex flex-row " style={{height:"25vw",marginTop:"40px",borderRadius:"12px"}}>
                         <FileUploader
                             multiple={true}
                             maxSize={5}
@@ -90,18 +90,17 @@ return<div className="d-flex flex-column align-content-center">
                                 console.log("Size "+err);
                             }}
                             handleChange={addSelectedFiles} name="file"> <div className="flex-grow-1 FilesDragAndDrop__area">
-                            Hey, drop me some files
                             <span
                                 role='img'
                                 aria-label='emoji'
-                                className='area__icon'
-                            >
-        &#128526;
-      </span>
+                                className='area__icon'>
+                           &#128190;
+                            </span>
                         </div></FileUploader>
 
                         <div className="flex-grow-1 selectedFiles scrollParent">
-                            {selectedFiles !=null && selectedFiles.length >0 ?<FileListComponent files={selectedFiles} onDelete={(file)=>{
+                            {selectedFiles !=null && selectedFiles.length >0 ?<FileListComponent files={selectedFiles}
+                            onDelete={(file)=>{
                                     const files = [];
                                     for(let i =0;i<selectedFiles.length;i++){
                                         if(selectedFiles[i].name !== file.name){
@@ -111,17 +110,16 @@ return<div className="d-flex flex-column align-content-center">
                                     setSelectedFiles(files);
                                 }
                                 }/>
-                                :<center><p>No file selected.</p></center>}
+                                :<center><p>No files selected</p></center>}
                         </div>
                     </div>
 
                     {(err!=null && err.length > 0) ?<p className="error">{err}</p>:null}
-                    <div style={{height:"20px"}}/>
                     <Button className={loading?"row btn-secondary smoothTransition": "row btn-warning smoothTransition"} onClick={
                         ()=>{
                            if(!loading) uploadFiles();
                         }
-                    }> {loading?"Uploading please wait...": "Upload"} </Button>
+                    } style={{width:'20%', margin:'auto', marginBottom:'30px', marginTop:'20px'}}> {loading?"Uploading ...": "Upload"} </Button>
                 </div>
 
 }

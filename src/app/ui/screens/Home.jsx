@@ -7,11 +7,8 @@ export default  function Home(){
         <div>
                 <div className="row align-items-center">
                     <div className="col-4">
-                        <h5 className="card-title">Save Files</h5>
-                        <p className="card-text">Save your Data Securely from any
-                            device without providing your
-                            account details.</p>
-                        <Link to="/save" className="btn btn-warning">Save Now</Link>
+                        <p className="card-text">Save your files securely from any device without the hassle of login or signup</p>
+                        <Link to="/save" className="btn btn-warning">Save</Link>
                     </div>
                     <div className="col-2"/>
                     <img src={save}  className="col-6" alt="save"/>
@@ -20,10 +17,8 @@ export default  function Home(){
                 <img src={download}  className="col-6" alt="save"/>
                 <div className="col-1"/>
                 <div className="col-5">
-                    <h5 className="card-title">Download Files</h5>
-                    <p className="card-text">Download your files easily by providing
-                        given key or by scanning given qrcode.</p>
-                    <Link to="/download" className="btn btn-warning">Download Now</Link>
+                    <p className="card-text">Download your files on any device using the unique key provided by us</p>
+                    <Link to="/download" className="btn btn-warning">Download</Link>
                 </div>
             </div>
         </div>

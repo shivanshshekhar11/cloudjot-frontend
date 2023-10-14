@@ -57,7 +57,7 @@ export default  function SavePage() {
        });
        // TODO update url soon
        try{
-           const headers = {'Access-Control-Allow-Origin':"http://localhost:3001/records",'Access-Control-Allow-Credentials':true};
+           const headers = {'Access-Control-Allow-Origin':"https://cloudjot-backend.onrender.com/records",'Access-Control-Allow-Credentials':true};
            let response =await axios.post(SERVER_URL+"records/",formData,{headers});
            // console.log(response);
            if(response.status ===201){
